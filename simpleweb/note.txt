@@ -1,0 +1,10 @@
+- File package.json như một bản kê khai thông tin của app, các modules, thư viện và nhiều thứ khác
+- Một số thuộc tính trong package.json: name, version, license, keywords, ...
+- Thuộc tính script là để thực thi các file .js
+- express trong nodejs là 1 app framework, cung cấp các phương thức cũng tính năng
+
+- RUN npm install --> xảy ra lỗi npm: not found vì trong base image không có npm, thay base image node:alpine (alpine verison from node image)
+- Khi tạo container, thì hàm RUN npm install sẽ install file FS snapshot của alpine image thôi nên khôn thấy file package.json --> không thể thấy các phần còn lại -->  COPY build files
+- COPY (path to folder to copy) (place to copy stuff to inside container)
+- docker build -t namespace/image_name
+- Port mapping: docker run -p 8080:8080 (machine port: container port) container name
