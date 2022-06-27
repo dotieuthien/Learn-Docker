@@ -1,11 +1,16 @@
 // import libs
 const express = require('express');
 const redis = require('redis');
+const process = reuire('process');
 
 // create an instance of express app
 const app = express();
 // Connection to redis server
-const client = redis.createClient();
+const client = redis.createClient({
+  host: 'redis-server',
+  port: 6379
+});
+client.set('visits', 0);
 
 // GET method route is made to the homepage '/'
 app.get('/', (req, res) => {
@@ -17,5 +22,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(8081, () => {
-  console.log('Listening on port 8081 ');
+  console.log('Listening on port 8081');
 });

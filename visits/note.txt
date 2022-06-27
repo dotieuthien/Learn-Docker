@@ -7,3 +7,11 @@
 - Có 2 solution ở đây: docker cli network, docker compose
 
 - Docker compose tiện hơn, combine a on of docker cli
+- Docker compose ở đây sẽ run redis server, run app, map port
+- redis-server lúc này là hostname
+- docker-compose up để run hoặc docker-compose up --build để build and run
+
+- run in background: docker-compose up -d
+- stop: docker-compose down
+
+- docker-compose ps
