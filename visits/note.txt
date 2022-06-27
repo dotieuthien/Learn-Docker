@@ -1,0 +1,9 @@
+- Bài toán khi có nhiều lượt truy cập sever
+- Với hướng tiếp cận là một container chưa cả node app và redis server --> khi có nhiều request thì cần có nhiều container --> redis server độc lập
+- Nên có 2 docker container: node app vs redis server --> scaling
+
+- Chạy redis server trước: docker run redis
+- Khi run docker của phần app thì lỗi vì không connect được 2 container
+- Có 2 solution ở đây: docker cli network, docker compose
+
+- Docker compose tiện hơn, combine a on of docker cli
