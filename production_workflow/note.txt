@@ -1,0 +1,2 @@
+- dev - test - deploy
+- npm install -g create-react-app
