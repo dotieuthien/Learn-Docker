@@ -1,2 +1,9 @@
 - dev - test - deploy
 - npm install -g create-react-app
+
+- Khi muốn thay đổi trong container mà không muốn build lại, usecase là muốn thay đổi một chút trong code như hiển thị chữ khác của trang web --> phải rebuild the image
+- trong dockerfile chúng ta copy src code vô trong workdir của container --> copy the snapshot nên khi src code có thay đổi thì trong docker container ko đổi
+- docker volume: thay vì copy nó sẽ tạo reference đến local src code trên local machine
+- Như là map port thì command là docker run -p 3000:3000
+- put the bookmark: -v /app/node_modules
+- map the pwd into the /app folder: -v $(pwd):/app
