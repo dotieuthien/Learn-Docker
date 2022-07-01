@@ -1,0 +1,21 @@
+- docker run <image name> command
+- Ex: docker run busybox echo hi there để print ra màn hình "hi there" --> overriding default commands
+- Image chứa FS snapshot vs start up command --> Container cũng chưa File System đó và thêm Hardware (CPU, RAM, Network)
+- Nên override ko dc nếu trong FS ko có command đó
+
+- List running container: docker ps
+
+- Container Lifecycle: 
++ docker run = docker create + docker start
++ docker create <image name>
++ docker start <container id> --> Có thể dùng cái này để start lại container bị stop, nhưng ko thể thay thế default command của container đó
++ Removing stopped containers: docker system prune
++ docker logs
++ docker stop <container_id>
++ docker kill <container_id>
+
+- docker exec -it <container id> <command>
+- docker exec -it <container id> sh/bash/zsh
+- docker run -it <image name> sh/bash
+
+- Khi chạy 2 container từ 1 image thì nó là riêng biệt, ví dụ touch file.txt trong 1 container thì container kia sẽ ko có
