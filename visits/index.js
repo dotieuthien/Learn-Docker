@@ -5,7 +5,7 @@ const process = reuire('process');
 
 // create an instance of express app
 const app = express();
-// Connection to redis server
+// connection to redis server
 const client = redis.createClient({
   host: 'redis-server',
   port: 6379

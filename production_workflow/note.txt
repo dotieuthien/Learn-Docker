@@ -1,5 +1,12 @@
-- dev - test - deploy
-- npm install -g create-react-app
+- install nvm để quản lí node version
+- nvm install node để update node
+- nvm ls để list version node
+- npx create-react-app frontend để tạo 1 project react chuẩn có node_modules chứa các packages
+- npm run start --> start dev server
+- npm run test để chạy test case
+- npm run build --> tạo ra folder build prod
+
+- create Dockerfile.dev cho MT dev và docker build -f Dockerfile.dev .
 
 - Khi muốn thay đổi trong container mà không muốn build lại, usecase là muốn thay đổi một chút trong code như hiển thị chữ khác của trang web --> phải rebuild the image
 - trong dockerfile chúng ta copy src code vô trong workdir của container --> copy the snapshot nên khi src code có thay đổi thì trong docker container ko đổi
@@ -7,3 +14,6 @@
 - Như là map port thì command là docker run -p 3000:3000
 - put the bookmark: -v /app/node_modules
 - map the pwd into the /app folder: -v $(pwd):/app
+- sử dụng docker-compose cho docker volume để không cần phải specify quá nhiều trong command docker run
++ /app/node_modules
++ .:/app --> local pwd : /app

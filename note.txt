@@ -9,6 +9,7 @@
 + docker run = docker create + docker start
 + docker create <image name>
 + docker start <container id> --> Có thể dùng cái này để start lại container bị stop, nhưng ko thể thay thế default command của container đó
++ docker start <container id> -a --> flush ra man hinh
 + Removing stopped containers: docker system prune
 + docker logs
 + docker stop <container_id>
